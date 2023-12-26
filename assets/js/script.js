@@ -11,7 +11,7 @@ function generatePassword() {
     const lowercase = document.getElementById('lowercase').checked;
     const numbers = document.getElementById('numbers').checked;
     const symbols = document.getElementById('symbols').checked;
-    const removeDuplicates = document.getElementById('removeDuplicates').checked;
+    // const removeDuplicates = document.getElementById('removeDuplicates').checked;
 
     let charset = generateCharset(uppercase, lowercase, numbers, symbols);
     let password = generateRandomPassword(length, charset);
@@ -42,6 +42,6 @@ function generateRandomPassword(length, charset) {
     return password;
 }
 
-function removeDuplicateCharacters(str) {
-    return [...new Set(str)].join('');
-}
+// function removeDuplicateCharacters(str) {
+//     return [...new Set(str)].join('');
+// }
