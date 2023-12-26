@@ -16,9 +16,9 @@ function generatePassword() {
     let charset = generateCharset(uppercase, lowercase, numbers, symbols);
     let password = generateRandomPassword(length, charset);
 
-    if (removeDuplicates) {
-        password = removeDuplicateCharacters(password);
-    }
+    // if (removeDuplicates) {
+    //     password = removeDuplicateCharacters(password);
+    // }
 
     document.getElementById('password').value = password;
 }
