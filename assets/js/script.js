@@ -2,7 +2,6 @@ function generatePassword() {
     const lengthInput = document.getElementById('length');
     const length = parseInt(lengthInput.value, 10);
 
-    // Check if length is a valid positive integer
     if (isNaN(length) || length <= 0) {
         alert('Please enter a valid positive integer for the length.');
         return;
@@ -40,10 +39,6 @@ function generateRandomPassword(length, charset) {
         const randomIndex = Math.floor(Math.random() * charset.length);
         password += charset[randomIndex];
     }
-
-    console.log('Requested Length:', length);
-    console.log('Actual Password Length:', password.length);
-
     return password;
 }
 
