@@ -36,15 +36,13 @@ function generateCharset(uppercase, lowercase, numbers, symbols) {
 
 function generateRandomPassword(length, charset) {
     let password = '';
-    for (let i = 1; i < length; i++) {
+    for (let i = 0; i < length; i++) {
         const randomIndex = Math.floor(Math.random() * charset.length);
         password += charset[randomIndex];
     }
 
-    while (password.length < length) {
-        const randomIndex = Math.floor(Math.random() * charset.length);
-        password += charset[randomIndex];
-    }
+    console.log('Requested Length:', length);
+    console.log('Actual Password Length:', password.length);
 
     return password;
 }
