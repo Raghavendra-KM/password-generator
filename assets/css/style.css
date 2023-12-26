@@ -21,16 +21,32 @@ h1 {
     margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    margin: 10px 0;
-}
-
-input {
+input[type="number"] {
     padding: 8px;
     width: calc(100% - 16px);
     box-sizing: border-box;
     margin-bottom: 10px;
+}
+
+.checkbox-group {
+    text-align: left;
+}
+
+.checkbox-group div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center align the content horizontally */
+}
+
+.checkbox-group span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    vertical-align: top;
 }
 
 button {
