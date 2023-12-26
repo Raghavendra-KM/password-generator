@@ -1,5 +1,13 @@
 function generatePassword() {
-    const length = document.getElementById('length').value;
+    const lengthInput = document.getElementById('length');
+    const length = parseInt(lengthInput.value, 10);
+
+    // Check if length is a valid positive integer
+    if (isNaN(length) || length <= 0) {
+        alert('Please enter a valid positive integer for the length.');
+        return;
+    }
+
     const uppercase = document.getElementById('uppercase').checked;
     const lowercase = document.getElementById('lowercase').checked;
     const numbers = document.getElementById('numbers').checked;
@@ -28,10 +36,16 @@ function generateCharset(uppercase, lowercase, numbers, symbols) {
 
 function generateRandomPassword(length, charset) {
     let password = '';
-    for (let i = 0; i < length; i++) {
+    for (let i = 1; i < length; i++) {
         const randomIndex = Math.floor(Math.random() * charset.length);
-        password += charset.charAt(randomIndex);
+        password += charset[randomIndex];
     }
+
+    while (password.length < length) {
+        const randomIndex = Math.floor(Math.random() * charset.length);
+        password += charset[randomIndex];
+    }
+
     return password;
 }
 
