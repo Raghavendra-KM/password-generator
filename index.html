@@ -12,15 +12,28 @@
 
     <div class="container">
         <h1>Password Generator</h1>
-        <label for="length">Password Length: </label>
+        <label for="length">Password Length:</label>
         <input type="number" id="length" value="12" pattern="\d*" min="6" max="30">
         <br>
-        <label for="uppercase">Include Uppercase</label> <input type="checkbox" id="uppercase" checked>
-        <label for="lowercase">Include Lowercase</label> <input type="checkbox" id="lowercase" checked>
-        <label for="numbers">Include Numbers</label> <input type="checkbox" id="numbers" checked>
-        <label for="symbols">Include Symbols</label> <input type="checkbox" id="symbols" checked>
-        <!-- <label for="removeDuplicates">Remove Duplicates</label> <input type="checkbox" id="removeDuplicates" checked> -->
-        <br>
+
+        <div class="checkbox-group">
+            <div>
+                <span>Include Uppercase</span>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+            <div>
+                <span>Include Lowercase</span>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+            <div>
+                <span>Include Numbers</span>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            <div>
+                <span>Include Symbols</span>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+        </div>
         <p>
             <button onclick="generatePassword()">Generate Password</button>
         </p>
